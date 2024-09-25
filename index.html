@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome icons for UI components -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Home Page Section -->
+    <div id="home-page">
+        <div class="user-details">
+            <!-- Logo of the Quiz App -->
+            <img src="logo.png" alt="Logo" class="logo">
+            <!-- Welcome message -->
+            <h1>Welcome to the Quiz App</h1>
+            <!-- Input field for the user's name -->
+            <input type="text" id="user-name" placeholder="Enter your name" class="text-input" required>
+            <!-- Error message if no name is entered -->
+            <p id="name-error" class="error hidden">Please enter your name!</p>
+            <!-- Category selection -->
+            <h2>Select a Category</h2>
+            <div class="category">
+                <!-- Buttons for selecting quiz categories -->
+                <button onclick="selectCategory('Pipes and Cisterns')">Pipes and Cisterns</button>
+                <button onclick="selectCategory('Probability')">Probability</button>
+                <button onclick="selectCategory('Problems on Age')">Problems on Age</button>
+                <button onclick="selectCategory('Profit and Loss')">Profit and Loss</button>
+            </div>
+            <!-- Start Quiz button (initially hidden) -->
+            <button id="start-quiz-button" class="hidden" onclick="startQuiz()">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page Section (Hidden initially, displayed after starting quiz) -->
+    <div id="quiz-page" class="hidden">
+        <div class="quiz-header">
+            <!-- Back button to return to the home page -->
+            <button class="back-button" onclick="goToHome()">
+                <i class="fa-solid fa-arrow-left"></i> <!-- Font Awesome icon for back button -->
+            </button>
+            <!-- Timer display (initially showing 00:00) -->
+            <div id="timer">Time: 00:00</div>
+            <!-- Score display (initially 0) -->
+            <div id="score">Score: 0</div>
+        </div>
+        <div id="quiz-content">
+            <!-- Displays current question number -->
+            <p id="question-number">Question 1</p>
+            <!-- Displays current question text -->
+            <p id="question-text">Question will appear here</p>
+            <!-- Options for the question (buttons) -->
+            <div class="options">
+                <button onclick="checkAnswer(0)">Option 1</button>
+                <button onclick="checkAnswer(1)">Option 2</button>
+                <button onclick="checkAnswer(2)">Option 3</button>
+                <button onclick="checkAnswer(3)">Option 4</button>
+            </div>
+            <!-- Next Question button (hidden initially, displayed after selecting an answer) -->
+            <button id="next-question" onclick="nextQuestion()" class="hidden">Next Question</button>
+        </div>
+    </div>
+
+    <!-- Result Page Section (Hidden initially, displayed after quiz is completed) -->
+    <div id="result-page" class="hidden">
+        <h1>Quiz Result</h1>
+        <!-- Display the user's name -->
+        <p>Name: <b><span id="result-name"></span></b></p>
+        <!-- Display the total time taken for the quiz -->
+        <p>Total Time: <b><span id="result-time"></span></b></p>
+        <!-- Display the number of questions attempted -->
+        <p>Questions Attempted: <b><span id="result-attempted"></span></b></p>
+        <!-- Display the number of correct answers -->
+        <p>Correct Answers: <b><span id="result-correct"></span></b></p>
+        <!-- Display the number of wrong answers -->
+        <p>Wrong Answers: <b><span id="result-wrong"></span></b></p>
+        <!-- Display the final score in percentage -->
+        <p>Score: <b><span id="result-score"></span>%</b></p>
+        <!-- Buttons for restarting the quiz or going back to the home page -->
+        <button class="result-button" onclick="restartQuiz()">Start Again</button>
+        <button class="result-button" onclick="goToHome()">Go to Home</button>
+    </div>
+
+    <!-- Link to the JavaScript file for handling quiz logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>

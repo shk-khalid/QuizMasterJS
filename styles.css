@@ -1,0 +1,220 @@
+/* Style for the entire body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.jpg'); /* Background image for the app */
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f4f8; /* Fallback background color */
+    backdrop-filter: blur(3px); /* Adds a blur effect to the background */
+}
+
+/* Hides elements when applying the 'hidden' class */
+.hidden {
+    display: none;
+}
+
+/* Common style for the home, quiz, and result pages */
+#home-page, #quiz-page, #result-page {
+    width: 50%; /* Width of the main content */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Input field for user name */
+.text-input {
+    border: 2px solid #d1dce5; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    transition: border 0.3s; /* Smooth transition for border on focus */
+    width: 100%; /* Full width input */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Style for text input when it's focused */
+.text-input:focus {
+    border: 2px solid #93c6ff; /* Border color changes to light blue on focus */
+    outline: none; /* Removes default focus outline */
+}
+
+/* Style for the Start Quiz button */
+#start-quiz-button {
+    background-color: white; /* White fill */
+    border: 2px solid #219ebc; /* Light blue border */
+    color: #219ebc; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    margin-top: 10px;
+}
+
+/* Hover effect for the Start Quiz button */
+#start-quiz-button:hover {
+    background-color: #219ebc; /* Blue fill */
+    color: white; /* White text */
+}
+
+/* Common button style */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Soft rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Category button grid */
+.category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style for category buttons */
+.category button {
+    background-color: white; /* White fill */
+    border: 2px solid #fb8500; /* Orange border */
+    color: #fb8500; /* Orange text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+}
+
+/* Focus effect for category buttons */
+.category button:focus {
+    background-color: #fb8500; /* Orange fill */
+    color: white; /* White text */
+}
+
+/* Header of the quiz (contains timer, back button, and score) */
+.quiz-header {
+    display: flex;
+    justify-content: space-between; /* Spacing between timer, score, and back button */
+    align-items: center; /* Align vertically in the center */
+}
+
+/* Back button style */
+.back-button {
+    background: none; /* No background */
+    border-radius: 5px; /* Soft rounded corners */
+    font-size: 24px; /* Large font size for icon */
+    cursor: pointer;
+    color: #219ebc; /* Light blue text color */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    color: #fb8500; /* Change color to orange on hover */
+}
+
+/* Grid layout for quiz options (2 columns) */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two options per row */
+    gap: 10px; /* Space between options */
+}
+
+/* Style for each option button */
+.options button {
+    padding: 15px;
+    font-size: 1rem;
+    background-color: white; /* White fill */
+    border: 2px solid #5baadf; /* Light blue border */
+    color: #5baadf; /* Light blue text */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the Next Question button */
+#next-question {
+    background-color: white; /* White fill */
+    border: 2px solid #219ebc; /* Light blue border */
+    color: #219ebc; /* Light blue text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    margin-top: 10px;
+}
+
+/* Hover effect for the Next Question button */
+#next-question:hover {
+    background-color: #219ebc; /* Blue fill */
+    color: white; /* White text */
+}
+
+/* Result page container */
+#result-page {
+    width: 50%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #d1dce5; /* Light grey border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Style for the buttons on the result page */
+.result-button {
+    background-color: white; /* White fill */
+    border: 2px solid #fb8500; /* Orange border */
+    color: #fb8500; /* Orange text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    margin: 10px; /* Space between buttons */
+}
+
+/* Hover effect for result page buttons */
+.result-button:hover {
+    background-color: #fb8500; /* Orange fill */
+    color: white; /* White text */
+}
+
+/* Quiz content area, including question and options */
+#quiz-content {
+    margin-top: 20px;
+    border: 2px solid #d1dce5; /* Light grey border */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fafbfd; /* Very light background */
+}
+
+/* Center navigation buttons (for results page) */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Timer and score display */
+#timer, #score {
+    display: inline-block;
+    margin: 10px;
+    color: #4a4a4a; /* Dark grey text */
+}
+
+/* Logo style for the home page */
+.logo {
+    width: 100px; /* Logo size */
+    margin-bottom: 20px;
+}
+
+/* Error message for invalid input (e.g., when name is not entered) */
+.error {
+    color: #d9534f; /* Red error color */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
